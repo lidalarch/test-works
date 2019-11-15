@@ -1,0 +1,64 @@
+#content {
+	display: block;
+	clear: both;
+	width: 682px;
+	height: 255px;
+	overflow: hidden;
+
+	margin: 200px auto 250px;
+	padding: 60px 80px 80px;
+	background-color: #FFF;
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	border-radius: 6px;
+	border:1px solid #f29a26;
+	-moz-box-shadow: 0 0 14px #494845;
+	-webkit-box-shadow: 0 0 14px #494845;
+	box-shadow: 0 0 14px #494845;
+}
+
+fieldset {
+	padding: 20px 40px;
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	border-radius: 6px;
+	border: none;
+	background: #dfdbd3 url(images/bg.gif) left top repeat-x;
+}
+
+legend {
+	font-size: 120%;
+	font-weight: bold;
+	color: #f29a26;
+	text-shadow: 1px 1px 0px #2a2824;
+}
+
+label {
+	font-weight: bold;
+	color: #494845;
+}
+
+input {
+	display: block;
+	margin: 10px;
+	padding: 3px;
+	border: 1px solid #999;
+	border-radius: 3px;
+}
+
+#uname, #pword {
+	width: 300px;
+}
+
+input[type="submit"] {
+	border: 1px solid #999;
+	border-radius: 3px;
+	margin: 20px 20px 20px 330px;
+	padding: 3px 10px;
+	font-size: 105%;
+	font-weight: bold;
+	color: #494845;
+}
+input[type="submit"]:hover, #uname:hover, #pword:hover, input[type="submit"]:focus, #uname:focus, #pword:focus {
+	box-shadow: 0 0 14px #fff;
+}

@@ -1,0 +1,251 @@
+﻿* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background: #DADADA url(images/bg_body.gif) left top repeat-x;
+	margin: 0 auto;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+#logout {
+	display: block;
+	position: absolute;
+	top: 20px;
+	right: 10px;
+	margin: 0 auto 14px;
+}
+
+#logout form input[type="submit"] {
+	border: 1px solid #999;
+	border-radius: 3px;
+	padding: 2px;
+	font-weight: bold;
+	color: #494845;
+}
+
+#print {
+	display: block;
+	position: absolute;
+	top: 20px;
+	right: 80px;
+	margin: 0 auto 14px;
+}
+
+#print form input[type="submit"] {
+	border: 1px solid #999;
+	border-radius: 3px;
+	padding: 2px;
+	font-weight: bold;
+	color: #494845;
+}
+
+#logout form input[type="submit"]:hover, #logout form input[type="submit"]:focus,
+ #datepicker:hover, #datepicker:focus,
+ #dateinput p input[type="submit"]:hover, #dateinput p input[type="submit"]:focus,
+ #print form input[type="submit"]:hover, #print form input[type="submit"]:focus {
+	box-shadow: 0 0 14px #494845;
+}
+
+#content {
+	display: block;
+	clear: both;
+	width: 1124px;
+	height: 790px;
+	overflow: hidden;
+
+	margin: 40px auto 0px;
+	padding: 10px;
+	background-color: #FFF;
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	border-radius: 6px;
+	border:1px solid #f29a26;
+	-moz-box-shadow: 0 0 14px #494845;
+	-webkit-box-shadow: 0 0 14px #494845;
+	box-shadow: 0 0 14px #494845;
+}
+
+#dateinput {
+	display: block;
+	position: absolute;
+	top: 20px;
+	left: 15px;
+	margin: 0 auto 14px;
+}
+
+#dateinput p {
+	font-weight: bold;
+	color: #f29a26;
+	text-shadow: 1px 1px 0px #2a2824;
+} 
+
+#datepicker {
+	border: 1px solid #999;
+	border-radius: 3px;
+	padding: 3px;
+	text-align: center;
+}
+
+#dateinput p input[type="submit"] {
+	border: 1px solid #999;
+	border-radius: 3px;
+	padding: 2px;
+	font-weight: bold;
+	color: #494845;
+}
+
+#caption {
+	margin: 0 auto 5px;
+	font-size: 120%;
+	font-weight: bold;
+	color: #494845;
+	text-shadow: 1px 1px 0px #2a2824;
+	text-align: left;
+} 
+
+table#balance {
+	border-collapse: collapse;
+	width: 100%;
+	text-align: center;
+}
+
+#balance thead {
+	position: relative;
+	display: block;
+}
+
+
+#balance th, #balance td {
+	border: 1px solid #494845;
+	padding: 2px;
+}
+
+#balance th {
+	background-color: #2a2824;
+	color: #FFF;
+}
+
+#balance tbody {
+	display: block;
+	height:690px;
+	overflow: auto;
+	width: 100%;
+}
+
+#balance tbody tr:nth-child(2n) {
+	background-color: #f9d29e;
+}
+
+#balance tbody tr:hover {
+	background-color: #706f6a;
+	color: #FFF;
+}
+
+th {
+	width: 84px;
+}
+
+th + th {
+	width: 84px;
+}
+
+th + th + th {
+	width: 84px;
+}
+
+th + th + th + th {
+	width: 84px;
+}
+
+th + th + th + th + th {
+	width: 84px;
+}
+
+th + th + th + th + th + th {
+	width: 84px;
+}
+
+th + th + th + th + th + th + th {
+	width: 100px;
+}
+
+th + th + th + th + th + th + th + th {
+	width: 100px;
+}
+
+th + th + th + th + th + th + th + th + th {
+	width: 100px;
+}
+
+th + th + th + th + th + th + th + th + th + th {
+	width: 268px;
+}
+
+
+
+td {
+	width: 84px;
+}
+
+td + td {
+	width: 84px;
+}
+
+td + td + td {
+	width: 84px;
+}
+
+td + td + td + td {
+	width: 84px;
+}
+
+td + td + td + td + td {
+	width: 84px;
+}
+
+td + td + td + td + td + td {
+	width: 84px;
+}
+
+td + td + td + td + td + td + td {
+	width: 100px;
+}
+
+td + td + td + td + td + td + td + td {
+	width: 100px;
+}
+
+td + td + td + td + td + td + td + td + td {
+	width: 100px;
+}
+
+td + td + td + td + td + td + td + td + td + td {
+	width: 252px;
+}
+
+#balance tfoot {
+	position: relative;
+	display: block;
+	border: none;
+	padding: 3px;
+}
+
+#balance tfoot td {
+	width: 562px;
+	border: none;
+}
+
+#balance tfoot div {
+	display: inline;
+	font-weight: bold;
+	color: #f29a26;
+	text-shadow: 1px 1px 0px #2a2824;
+}
+
+#info{
+	text-align: center;
+	color: #f29a26;
+	text-shadow: 1px 1px 0px #2a2824;
+}

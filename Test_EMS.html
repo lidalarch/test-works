@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+	<title>Тестовое задание - данные о доставке</title>
+	<style>
+		#formData,  select{
+			font-family: Verdana, Arial, Helvetica, sans-serif;
+			color:#999;
+		}
+		#formData {
+			font-size: 0.8em;
+			width: 500px;
+		}
+
+		table{
+			width: 100%;
+		}
+		td {
+			width: 226px;
+			padding: 5px;
+		}
+		select {
+			width: 230px;
+			border: 1px solid #999;
+			border-radius: 6px;
+			padding: 3px;
+		}		
+		#buttonPlace {
+			text-align: right;
+			padding: 10px 20px;
+		}
+		#calc {
+			width: 100px;
+			font-family: Verdana, Arial, Helvetica, sans-serif;
+			border-color: #999;
+		}
+		#onError {
+			Color: red;
+			text-align: center;
+			font-weight: bold;
+		}
+		#result, #onError {
+			visibility: hidden;
+		} /**/
+	</style>
+	<script src="http://www.google.com/jsapi"></script>
+    <script> google.load("jquery", "1.7.1"); </script>
+	<script>
+		$(function (){
+			$.ajax({
+				url: "http://emspost.ru/api/rest/?method=ems.get.locations&type=cities&plain=true",
+				dataType: "jsonp",
+				success: function(data){
+					var cities = "";
+					var cityname = "";
+					for (i=0, l=data.rsp.locations.length; i<l; i++){
+						var arrcity = data.rsp.locations[i].name.split("");
+						var newArrcity = new Array();
+						newArrcity[0] = arrcity[0];
+						for (var j=1, lj=arrcity.length; j < lj; j++) {
+							if ((newArrcity[j-1] == " ") || (newArrcity[j-1] == "-"))
+								newArrcity[j] = arrcity[j];
+							else newArrcity[j] = arrcity[j].toLowerCase ();
+						}
+						cityname = newArrcity.join ("");
+						cities += "<option value=" + data.rsp.locations[i].value + ">" + cityname + "</option>";
+					}
+					$("#sendFrom, #sendTo").append(cities);
+				}
+			});
+			
+			$.ajax({
+					url: "http://emspost.ru/api/rest/?method=ems.get.max.weight",
+					dataType: "jsonp",
+					success: function(data){
+						var index = data.rsp.max_weight/0.1;
+						var weightint = "";
+						for (i=0;i<index;i++){
+							weightint += "<option value=" + ((i/10)+0.1).toFixed(1) + ">" + (i/10).toFixed(1) + " - " + ((i/10)+0.1).toFixed(1) + "</option>";
+						}
+						$("#weight").append(weightint);
+					}		
+			});
+			
+			$("#calc").click(function () {
+				var oSendFrom = $("#sendFrom option:selected").val();
+				var oSendTo = $("#sendTo option:selected").val();
+				var oWeight = $("#weight option:selected").val();
+				$.ajax({
+					url: "http://emspost.ru/api/rest?method=ems.calculate",
+					dataType: "jsonp",
+					data: {
+					from:oSendFrom,
+					to:oSendTo,
+					weight:oWeight
+					},
+					success: function(data){
+						if ((oSendFrom != "")&(oSendTo != "")&(oWeight != "")) {
+							$("#onError").css({"visibility":"hidden"});
+							$("#delivValue").empty().append(data.rsp.price);
+							$("#delivTime").empty().append(data.rsp.term.min + " - " + data.rsp.term.max);
+							$("#result").css({"visibility":"visible"});
+						}
+						else {
+							$("#result").css({"visibility":"hidden"});
+							$("#onError").css({"visibility":"visible"});
+						}
+					},
+					error: function(data){
+						$("#onError").css({"visibility":"visible"});
+					}
+				});
+			});
+		});
+    </script>	
+</head>
+<body>
+	<div id="formData">
+		<table id="sendInput">
+			<tr>
+				<td>Откуда</td>
+				<td>
+					<select id="sendFrom" name="sendFrom">
+						<option> </option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td>Куда</td>
+				<td>
+					<select id="sendTo" name="sendTo">
+						<option> </option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td>Вес(кг)</td>
+				<td>
+					<select id="weight" name="weight">
+						<option> </option>
+					</select>
+				</td>
+			</tr>
+		</table><!-- end #sendInput -->
+		<div id="buttonPlace"><input type="button" id="calc" name="calc" value="Рассчитать"></div>
+		<div id="onError">Недостаточно данных</div>
+		<table id="result">
+				<tr>
+					<td>Стоимость(руб)</td>
+					<td id="delivValue"></td>
+				</tr>
+				<tr>
+					<td>Срок(дней)</td>
+					<td id="delivTime"></td>
+				</tr>
+		</table><!-- end #result -->
+	</div><!-- end #formData -->
+</body>
+</html>

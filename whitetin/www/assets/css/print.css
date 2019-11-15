@@ -1,0 +1,184 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background: none;
+	margin: 0 auto;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+#logout {
+	display: none
+}
+
+#print {
+	display: none
+}
+
+#content {
+	display: block;
+	clear: both;
+	width: 1124px;
+	height: 790px;
+	overflow: hidden;
+
+	margin: 40px auto 0px;
+	padding: 10px;
+	background-color: #FFF;
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	border-radius: 6px;
+	border:1px solid #f29a26;
+}
+
+#dateinput {
+	display: none
+}
+
+#caption {
+	margin: 0 auto 5px;
+	font-size: 120%;
+	font-weight: bold;
+	color: #494845;
+	text-align: left;
+} 
+
+table#balance {
+	border-collapse: collapse;
+	width: 100%;
+	text-align: center;
+}
+
+#balance thead {
+	position: relative;
+	display: block;
+}
+
+
+#balance th, #balance td {
+	border: 1px solid #494845;
+	padding: 2px;
+}
+
+#balance th {
+	background-color: #2a2824;
+	color: #FFF;
+}
+
+#balance tbody {
+	display: block;
+	height:690px;
+	overflow: auto;
+	width: 100%;
+}
+
+#balance tbody tr:nth-child(2n) {
+	background-color: #f9d29e;
+}
+
+th {
+	width: 84px;
+}
+
+th + th {
+	width: 84px;
+}
+
+th + th + th {
+	width: 84px;
+}
+
+th + th + th + th {
+	width: 84px;
+}
+
+th + th + th + th + th {
+	width: 84px;
+}
+
+th + th + th + th + th + th {
+	width: 84px;
+}
+
+th + th + th + th + th + th + th {
+	width: 100px;
+}
+
+th + th + th + th + th + th + th + th {
+	width: 100px;
+}
+
+th + th + th + th + th + th + th + th + th {
+	width: 100px;
+}
+
+th + th + th + th + th + th + th + th + th + th {
+	width: 268px;
+}
+
+
+
+td {
+	width: 84px;
+}
+
+td + td {
+	width: 84px;
+}
+
+td + td + td {
+	width: 84px;
+}
+
+td + td + td + td {
+	width: 84px;
+}
+
+td + td + td + td + td {
+	width: 84px;
+}
+
+td + td + td + td + td + td {
+	width: 84px;
+}
+
+td + td + td + td + td + td + td {
+	width: 100px;
+}
+
+td + td + td + td + td + td + td + td {
+	width: 100px;
+}
+
+td + td + td + td + td + td + td + td + td {
+	width: 100px;
+}
+
+td + td + td + td + td + td + td + td + td + td {
+	width: 252px;
+}
+
+#balance tfoot {
+	position: relative;
+	display: block;
+	border: none;
+	padding: 3px;
+}
+
+#balance tfoot td {
+	width: 562px;
+	border: none;
+}
+
+#balance tfoot div {
+	display: inline;
+	font-weight: bold;
+	color: #000;
+}
+
+#info{
+	text-align: center;
+	color: #000;
+}
