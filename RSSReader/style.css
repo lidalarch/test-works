@@ -1,0 +1,97 @@
+﻿body { 
+	font: georgia, sans-serif;
+	color: #000; 
+	background: #dfdbd3; 
+	margin: 0 20px 10px; 
+	padding: 0;
+}
+p { 
+	text-align: justify;
+	margin-right: 200px;
+}
+#header {
+	background: #b2ac9f;
+	margin: 10px 10px 10px 0px; 
+	padding: 5px; 10px;
+}
+#header p {
+	font: italic normal 95% georgia, sans-serif;
+	margin-top: -4px;
+}
+#header h1 {
+	color: #12100e;
+	margin-bottom: 0px;
+	letter-spacing: 2px;
+}
+h2 { 
+	font: normal 1.4em georgia, sans-serif;
+	margin-bottom: 0px; 
+	color: #7D775C;
+}
+p.pub-date {
+	font: italic normal 95% georgia, sans-serif;
+	margin-top: -2px;
+}
+a { 
+	font-weight: bold; 
+	text-decoration: none; 
+	color: #12100e;
+}
+a:visited, a:active { 
+	font-weight: bold;
+	color: #676052;
+}
+a:hover, a:focus { 
+	text-decoration: underline; 
+	color: #b2ac9f;
+}
+div.commPlace {
+	border-top: 1px solid #999;
+}
+.commPlace h3 {
+	margin-bottom: 0px;
+	color: #3d362f;
+	font: normal 95% georgia, sans-serif;
+}
+.commPlace p {
+	color: #3d362f;
+	padding: 0px 40px;
+}
+.commPlace p.pub-date {
+	color: #3d362f;
+	font: italic normal 95% georgia, sans-serif;
+	margin-top: -3px;
+	padding: 0px;
+}
+p.form {
+	display: inline;	
+	font: italic normal 95% georgia, sans-serif;
+	padding: 0px 5px;
+}
+input.email {
+	display: inline;
+	margin: 5px 0px;
+	height: 20px;
+	width: 150px;
+	border: 1px solid #999;
+	border-radius: 3px;
+}
+input.comm {
+	display: block;	
+	height: 40px;
+	width: 300px;
+	border: 1px solid #999;
+	border-radius: 3px;
+}
+input.button {
+	border: 1px solid #999;
+	border-radius: 3px;
+	margin: 5px 20px 20px 0px;
+	padding: 0px 10px;
+	font-weight: bold;
+	color: #12100e;
+	background: #b2ac9f;
+}
+input.button:hover, input.button:focus, input.email:hover, input.email:focus, input.comm:hover, input.comm:focus {
+	box-shadow: 0 0 14px #fff;
+}
